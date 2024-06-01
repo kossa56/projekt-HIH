@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Hobby>
+    <author>
+            <name>Michał </name>
+            <surname>Kossakowski </surname>
+            <rok_urodzenia>2004 </rok_urodzenia>
+    </author>
+    <motocykle>
+
+        <motocykl posiadany="tak" typ="cruiser">
+            <marka>Honda </marka>
+            <model>Shadow</model>
+            <rocznik>1987</rocznik>
+            <pojemnosc>1100cc</pojemnosc>
+            <moc>67 KM</moc>
+            <zdjecie source="obrazki/shadow.jpg"/>
+        </motocykl>
+
+        <motocykl posiadany="nie" typ="cruiser">
+            <marka>Indian </marka>
+            <model>Scout</model>
+            <rocznik>2023</rocznik>
+            <pojemnosc>1100cc</pojemnosc>
+            <moc>100 KM</moc>
+            <zdjecie source="obrazki/Indian.jpg"/>
+        </motocykl>
+
+        
+        <motocykl posiadany="tak" typ="Adventure">
+            <marka>Honda </marka>
+            <model>Transalp</model>
+            <rocznik>1998</rocznik>
+            <pojemnosc>600cc</pojemnosc>
+            <moc>50 KM</moc>
+            <zdjecie source="obrazki/Trampek.jpg"/>
+        </motocykl>
+
+    </motocykle>
+
+    <wycieczki>
+        <wycieczka>
+            <miejsce obszar="wieś">Święta Lipka</miejsce>
+            <data pora_roku="lato">2023-06-03</data>
+            <opis rodzaj="relacja">
+                W ciepły letni poranek, w sercu Warmii i Mazur, rozpoczął się zlot motocyklowy, który miał zmienić moje życie na zawsze. Byłem dumny właściciel motocykla Honda Shadow z czterobiegową skrzynią, który towarzyszył mi w niezliczonych podróżach. Jednak tym razem była to wyjątkowa podróż. Wraz z grupą przyjaciół motocyklistów zdecydowaliśmy się na niezapomniany wyjazd do urokliwej miejscowości Święta Lipka, aby wziąć udział w zlocie motocyklowym.Wysiedliśmy z naszych motocykli przy malowniczym sanktuarium Świętej Lipki. Kościół pw. Świętej Trójcy, z charakterystyczną barokową fasadą, stanął przed nami jak monumentalne dzieło sztuki. Wszystko wskazywało na to, że to będzie weekend pełen przygód, motocyklowych emocji i nowych przyjaźni.Zjazd do Świętej Lipki przyciągnął motocyklistów z różnych zakątków Polski, a także niektórych z innych krajów Europy. To było święto jednośladów, gdzie duch wolności i braterstwa były na porządku dziennym. Dźwięk motocykli wypełniał powietrze, a zapach spalin dodawał charakteru temu wydarzeniu.Pierwszy dzień zlotu był poświęcony rejestrowaniu uczestników, poznawaniu innych miłośników motocykli oraz zwiedzaniu okolic. Razem z przyjaciółmi odkryliśmy urokliwe jeziora i lasy, które otaczały Świętą Lipkę. Podczas jednej z przerw na kawę, spotkaliśmy grupę niemieckich motocyklistów, z którymi szybko znaleźliśmy wspólny język, mimo różnicy języka. To było magiczne uczucie jedności wśród ludzi, którzy łączyła ta sama pasja.Następnego dnia nadszedł czas na główne wydarzenie - wspaniałą przejażdżkę po okolicy. Nasze motocykle, w tym moja wierna Honda Shadow, stanęły w szranki z krętymi drogami i pagórkami Warmii i Mazur. To były drogi, na których można było poczuć prawdziwą wolność i przyspieszyć na prostych odcinkach. Było coś magicznego w odkrywaniu nieznanych tras i podziwianiu piękna krajobrazu.Podczas przerw w trasie mieliśmy okazję spróbować lokalnych potraw w urokliwych restauracjach. Kiełbasa grillowana na ognisku, świeże ryby i regionalne sery były prawdziwą ucztą dla naszych podniebień. Jednak najważniejsze były rozmowy i śmiech przy wspólnym stole. Poznawanie innych motocyklistów, słuchanie ich historii podróży i dzielenie się naszymi przygodami sprawiało, że to wydarzenie miało wyjątkowy klimat.Wieczorami odbywały się koncerty i występy muzyczne, na których można było tańczyć i cieszyć się muzyką na świeżym powietrzu. Czułem się, jakbym znalazł się na festiwalu, gdzie muzyka motocyklistów brzmiała głośniej niż gdziekolwiek indziej.Ostatni dzień zlotu był pełen emocji. Było to czas na pożegnania nowych przyjaciół, wymianę kontaktów i planowanie przyszłych podróży razem. Po ostatnim wspólnym posiłku wyjechaliśmy z Świętej Lipki, ale zostawiliśmy część naszych serc w tym uroczym miejscu.Zlot motocyklowy w Świętej Lipce przyniósł nie tylko niezapomniane przeżycia na drodze, ale również nowe przyjaźnie i wspomnienia, które pozostaną ze mną na zawsze. Jazda moją Hondą Shadow w towarzystwie takich ludzi była nie tylko odkrywaniem nowych tras, ale także odkrywaniem siebie i prawdziwego ducha motocyklisty. To było weekend, który utwierdził mnie w przekonaniu, że motocykl to nie tylko pojazd, to symbol wolności i przygody, który może zmienić życie każdego, kto zdecyduje się wsiąść na siodło i ruszyć w nieznane. Święta Lipka, to nie tylko sanktuarium, to miejsce, które na zawsze zapadło w mojej pamięci jako symbol motocyklowej pasji i przyjaźni.
+            </opis>
+            <link tytul="dodatkowe_informacje" source="https://www.swlipka.pl"/>
+            <link tytul="dodatkowe_informacje" source="https://pl.wikipedia.org/wiki/Święta_Lipka"/>
+        </wycieczka>
+
+        <wycieczka>
+            <miejsce obszar="miasto">Pasłęk</miejsce>
+            <data pora_roku="lato">2023-08-20</data>
+            <opis rodzaj="relacja">
+                W ciepłe letnie dni, światło słońca odbijające się od lśniących chromowanych elementów naszych motocykli lśniło jeszcze jaśniej. To był dzień, który wiele osób czekało z niecierpliwością - Pasłęckie Dni Motocyklistów. Byłem tam, w samym sercu Warmii i Mazur, aby uczestniczyć w tym wyjątkowym zlocie na moim ulubionym motocyklu Honda Shadow, sprowadzonym z USA z czterobiegową skrzynią.Przygotowania:Wszystko zaczęło się kilka miesięcy wcześniej, kiedy dowiedziałem się o nadchodzącym zlocie w Pasłęku. Byłem motocyklistą z pasją, a Honda Shadow to mój wierny towarzysz na drodze. Zdecydowałem, że to będzie doskonała okazja, aby wziąć udział w jednym z najbardziej malowniczych zlotów w Polsce.Zbierałem się w drogę na kilka dni przed wydarzeniem. Przygotowałem mojego Shadow'a, dokładnie sprawdzając wszystkie detale i oczywiście chromowane elementy, aby zabłyszczały jeszcze bardziej na zlocie. Moje serce waliło szybciej, a motocykl już nie mógł doczekać się przygody.Przybycie:Kiedy nadeszła ta długo wyczekiwana chwila, wskoczyłem na siodło mojego motocykla, założyłem kask i ruszyłem w drogę. To było około 300 kilometrów jazdy, ale nie obchodziło mnie to. Widoki były niesamowite, a trasa prowadziła przez urokliwe miasteczka i malownicze krajobrazy Warmii i Mazur. To był dokładnie ten rodzaj przygody, którego szukałem.Pasłęckie Dni Motocyklistów:Gdy dotarłem do Pasłęka, zlot motocyklistów był już w pełnym rozkwicie. Znajdowało się tu mnóstwo motocykli różnych marek, ale moje serce biło w rytmie mojego Hondy Shadow. Na terenie zlotu panowała atmosfera ekscytacji i przyjaźni. Wszyscy byli zainteresowani motocyklami, opowiadali swoje historie i dzielili się swoją pasją.W trakcie wydarzenia odbywały się różne konkursy i pokazy motocyklowe. Jednym z moich ulubionych momentów był konkurs "Custom Bike Show", w którym motocykliści prezentowali swoje unikatowe przeróbki i stylizacje. Byłem zachwycony kreatywnością i wyobraźnią, jaką ludzie wkładali w swoje maszyny.Wieczorami odbywały się koncerty na żywo, na których można było tańczyć i cieszyć się muzyką w towarzystwie nowo poznanych przyjaciół. Niezapomnianym przeżyciem był koncert zespołu grającego rock klasyczny, który wprawił nas wszystkich w ekstazę.Wycieczka Po Okolicy:Podczas jednej z przerw w programie zlotu, postanowiliśmy wyruszyć na wycieczkę motocyklową po okolicy. Warmia i Mazury to raj dla miłośników motocykli, z malowniczymi trasami, jeziorami i lasami. Przejażdżka była pełna serpentyn, gdzie nasze Honda Shadow'y mogły pokazać swoją moc i zwinność.Podsumowanie:Pasłęckie Dni Motocyklistów to wydarzenie, które na zawsze pozostanie w mojej pamięci. To nie tylko czas spędzony na siodle mojego ulubionego motocykla, ale także okazja do poznania wielu niesamowitych ludzi, którzy mają tę samą pasję. To uczucie wolności, przygody i przyjaźni, które sprawiło, że zlot w Pasłęku stał się jednym z moich ulubionych wydarzeń motocyklowych. Teraz wracam do domu z wieloma nowymi wspomnieniami i obiecując sobie, że wrócę tu za rok, gotów na nową przygodę na mojej Hondzie Shadow.
+            </opis>
+
+            <zdjecia>
+                <maszyny>
+                    <zdjecie source="obrazki/Paslek/motory3.jpg"/>
+                    <zdjecie source="obrazki/Paslek/motory4.jpg"/>
+                </maszyny>
+                <pole>
+                    <zdjecie source="obrazki/Paslek/pole1.jpg"/>
+                </pole>
+            </zdjecia>
+            <link tytul="dodatkowe_informacje" source="https://pl.wikipedia.org/wiki/Pasłęk"/>
+        </wycieczka>
+    </wycieczki>
+
+    <salony_motocyklowe>
+        <salon trojmiasto="tak">
+            <nazwa>BALTIC MOTORS</nazwa>
+            <adres dzielnica="Żabianka">
+                <ulica>Pelplinska 4</ulica>
+                <miasto>Gdańsk</miasto>
+                <kod_pocztowy>80-335</kod_pocztowy>
+            </adres>
+            <kontakt>
+                <telefon>58 888 15 75</telefon>
+                <email>biuro@balticmotors.pl</email>
+            </kontakt>
+            <marki_motocykli>
+                Aprilla Yamaha Ducati
+            </marki_motocykli>
+        </salon>
+
+        <salon trojmiasto="tak">
+            <nazwa>Honda Pomirski</nazwa>
+            <adres dzielnica="Kokoszki">
+                <ulica>Lubczykowa 11</ulica>
+                <miasto>Gdańsk</miasto>
+                <kod_pocztowy>80-177</kod_pocztowy>
+            </adres>
+            <kontakt>
+                <telefon>58 342 40 46</telefon>
+                <email>salon@pomirski.pl</email>
+            </kontakt>
+            <marki_motocykli>
+       			Honda
+            </marki_motocykli>
+        </salon>
+    </salony_motocyklowe>
+
+    <motocyklista>
+            <kask>
+                <szczegoly>interkom</szczegoly>
+            </kask>
+            <kurtka>SHIMA BANDIT BLACKa</kurtka>
+            <spodnie>SHIMA PISTON BLACK</spodnie>
+            <buty>SHIMA RSX-6 BLACK</buty>
+    </motocyklista>
+
+    <grupy_motocyklowe>
+        <grupa_motocyklowa>
+            <nazwa>MotoBracia</nazwa>
+            <liczba_czlonkow>5900</liczba_czlonkow>
+            <rok_zalozenia>2010</rok_zalozenia>
+            <siedziba>Miasto</siedziba>
+        </grupa_motocyklowa>
+
+    <grupa_motocyklowa>
+        <nazwa>Rebels</nazwa>
+        <liczba_czlonkow>300000</liczba_czlonkow>
+        <rok_zalozenia>1969</rok_zalozenia>
+        <siedziba>Miasto</siedziba>
+    </grupa_motocyklowa>
+
+    </grupy_motocyklowe>
+
+</Hobby>
+ 

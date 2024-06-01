@@ -1,0 +1,315 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="Hobby" type="HobbyTyp"/>
+
+    <xs:complexType name="HobbyTyp">
+		<xs:sequence>
+			<xs:element name="author" type="authorType" /> 	
+			<xs:element name="motocykle" type="motocykleTyp" /> 
+			<xs:element name="wycieczki" type="wycieczkiTyp" />
+      <xs:element name="salony_motocyklowe" type="salony_motocykloweTyp" />
+      <xs:element name="motocyklista" type="RozszerzonyUbiorType" />
+      <xs:element name="grupy_motocyklowe"/>
+		</xs:sequence>
+	</xs:complexType>
+
+<xs:complexType name="authorType">
+		<xs:sequence>
+			<xs:element name="name" type="shortStringType" />		
+			<xs:element name="surname" type="longStringType" />
+      <xs:element name="rok_urodzenia" type="xs:gYear" />	
+		</xs:sequence>
+	</xs:complexType>
+  
+  <xs:complexType name="motocykleTyp">
+		<xs:sequence>
+			<xs:element name="motocykl" minOccurs="0" maxOccurs="unbounded">	
+				<xs:complexType>		
+					<xs:sequence>
+						<xs:element name="marka" type="shortStringType" />			
+						<xs:element name="model" type="mediumStringType" />
+            <xs:element name="rocznik" type="roczek" />			
+						<xs:element name="pojemnosc" type="shortStringType" />
+            <xs:element name="moc" type="xs:string" />
+						<xs:element ref="zdjecie" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+                  <xs:attribute name="posiadany" use="required">
+				  <xs:simpleType>
+					  <xs:restriction base="xs:string">
+						  <xs:enumeration value="tak"/>
+							  <xs:enumeration value="nie"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+                   <xs:attribute name="typ" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="cruiser"/>
+							<xs:enumeration value="Adventure"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+				</xs:complexType>
+     
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+  <xs:element name="zdjecie" type="adressType"/>
+  <xs:element name="link" type="adressType"/> 
+
+<xs:complexType name="adressType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+      <xs:attribute name="tytul" type="xs:string" />
+				<xs:attribute name="source" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+<xs:complexType name="wycieczkiTyp">
+		<xs:sequence>
+			<xs:element name="wycieczka" minOccurs="0" maxOccurs="unbounded">      
+				<xs:complexType>               
+					<xs:sequence>                      
+						<xs:element name="miejsce">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="longStringType">
+                      <xs:attribute name="obszar" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>		
+          
+						<xs:element name="data">
+              <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="shortStringType">
+                       <xs:attribute name="pora_roku" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+            <xs:element name="opis">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                       <xs:attribute name="rodzaj" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>		
+
+						<xs:element name="zdjecia" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="maszyny" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="zdjecie" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="source"  use="required"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    <xs:element name="pole" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="zdjecie" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="source" type="xs:string" use="required"/>
+                              </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  </xs:complexType>
+            </xs:element>
+
+            <xs:element ref="link" minOccurs="0" maxOccurs="unbounded"/>
+
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+<xs:simpleType name="shortStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="longStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+ <xs:simpleType name="mediumStringType">
+  <xs:restriction base="xs:string">
+    <xs:minLength value="5"/>   
+    <xs:maxLength value="20"/> 
+    <xs:pattern value="[(A-Z)(a-z)* (0-9)]+"/>
+  </xs:restriction>
+</xs:simpleType>
+
+  <xs:simpleType name="kalendarz">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+
+ <xs:simpleType name="roczek">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1900"/>
+      <xs:maxInclusive value="2100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:attribute name="dzielnica" type="xs:string"/>
+
+  <xs:attribute name="trojmiasto" type="trojmiastoType"/>
+
+    <xs:complexType name="salony_motocykloweTyp">
+      <xs:sequence>
+        <xs:element name="salon" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nazwa" type="xs:string"/>
+              <xs:group ref="adres_kontakt"/>
+              <xs:element name="marki_motocykli" type="markiMotocykliList"/>
+            </xs:sequence>
+           
+            <xs:attribute ref="trojmiasto"/>
+           
+            <xs:attribute ref="dzielnica"/>
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+
+  <xs:group name="adres_kontakt">
+    <xs:sequence>
+      <xs:element name="adres">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ulica" type="mediumStringType"/>
+            <xs:element name="miasto" type="xs:string"/>
+            <xs:element name="kod_pocztowy" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute ref="dzielnica"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kontakt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefon" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+
+  
+  <xs:simpleType name="markiMotocykliList">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Aprilla"/>
+          <xs:enumeration value="Yamaha"/>
+          <xs:enumeration value="Ducati"/>
+          <xs:enumeration value="Honda"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+
+ 
+  <xs:simpleType name="trojmiastoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="tak"/>
+      <xs:enumeration value="nie"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+ 
+  <xs:simpleType name="KaskDetailsType">
+  <xs:restriction base="xs:string">
+      <xs:enumeration value="interkom"/>
+      <xs:enumeration value="blenda"/>
+      <xs:enumeration value="kominarka"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+ 
+  <xs:simpleType name="SzczegolyKaskuType">
+    <xs:union memberTypes="KaskDetailsType BrakSzczegolowType"/>
+  </xs:simpleType>
+
+
+  <xs:complexType name="KaskType">
+    <xs:choice>
+      <xs:element name="typ" type="xs:string"/>
+      <xs:element name="szczegoly" type="SzczegolyKaskuType"/>
+    </xs:choice>
+  </xs:complexType>
+
+
+  <xs:simpleType name="BrakSzczegolowType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="brak"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="UbiorType">
+  <xs:sequence>
+    <xs:element name="kask" type="KaskType"/>
+    <xs:element name="kurtka" type="xs:string"/>
+    <xs:element name="spodnie" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RozszerzonyUbiorType">
+  <xs:complexContent>
+    <xs:extension base="UbiorType">
+      <xs:choice>
+        <xs:element name="buty" type="xs:string"/>
+        <xs:element name="skarpety" type="xs:string"/>
+      </xs:choice>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+ 
+  <xs:element name="grupy_motocyklowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="grupa_motocyklowa" type="grupaMotocyklowaType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="grupaMotocyklowaType">
+    <xs:all>
+      <xs:element name="nazwa" type="xs:string"/>
+      <xs:element name="liczba_czlonkow" type="xs:integer"/>
+      <xs:element name="rok_zalozenia" type="xs:integer"/>
+      <xs:element name="siedziba" type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  </xs:schema>

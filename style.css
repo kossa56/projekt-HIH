@@ -1,0 +1,222 @@
+html, body {
+	background-color: rgb(172, 218, 240);
+	color: rgb(10, 10, 10);
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-image: url("obrazki/zlot.jpg");
+	background-attachment: scroll;
+	background-repeat: repeat-y;
+
+}
+#container{
+	width: max-content;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: aliceblue;
+}
+header{
+	background-color: aliceblue;
+	background-image: url(obrazki/niebo.jpg);
+	width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: larger;
+	padding: 5px;
+	font-weight: bold;
+	color: #093280;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav{
+	background-color: aliceblue;
+	float: left;
+	padding: 15px;
+	
+	
+}
+.content{
+	background-color: aliceblue;
+	float: left;
+	width: 1000px;
+	font-size: larger;
+	border-right: 2px solid #8eade5; 
+	padding: 10px;
+	border-left: 2px solid #8eade5; 
+
+	
+}
+ul{
+	list-style-type:upper-roman ;
+	font-size: larger;
+}
+li{
+	margin: 10px;
+}
+.tabela{
+	border: 2px solid black; 
+
+}
+.obrys{
+	border: 1px solid rgb(67, 68, 70);
+}
+.formularz{
+	float: left;
+}
+footer{
+	background-image: url(obrazki/trawa.jpg);
+	clear: both;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol{
+	list-style-type:circle;
+}
+label{
+	padding: 5px;
+}
+p::first-letter {
+    font-weight: bold;
+    color: rgb(135, 175, 235);
+}
+a:hover {
+    color: rgb(118, 200, 248);
+}
+input:focus {
+    border: 2px solid blue; 
+    background-color: #f0f0f0; 
+    color: #000; 
+}
+#swieta_lipka{
+	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ja_swieta_lipka{
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+#Paslek{
+	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+td{
+	text-align: center;
+}
+.wiersz:hover{
+	background-color: blanchedalmond;
+}
+.ramka{
+	border: 2px solid #8eade5; 
+	padding: 10px;
+	border-style:groove;
+	
+}
+.obrazek{
+	width: 250px;
+	height: 150px;
+	float: left;
+	padding: 5px;
+	transition: transform 0.3s ease;
+}
+.obrazek:hover {
+    transform: scale(2); 
+
+}
+.img{
+	width: 250px;
+	height: 150px;
+	
+}
+#swieta_lipka_galeria{
+	text-align: center;
+	font-size: larger;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#Paslek_galeria{
+	clear: both;
+	text-align: center;
+	font-size: larger;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.do_srodka{
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.square {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(180, 180, 238);
+    transition: background-color 1s ease;
+}
+
+.square:hover {
+    animation: rotate 2s linear infinite;
+    background-color: rgb(57, 145, 216);
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 600px) {
+	table {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px) {
+	
+	header{
+		position: relative;
+		width: 120vw;
+		float: left;
+	}
+	nav {
+		position: relative; 
+		width: 100%;
+	
+	}
+	.content{
+		position: relative;
+		overflow-x: auto;
+		width: 17%;
+	
+	}
+	footer{
+		position:relative;
+		width: 120vw;
+		float: left;
+	
+	}
+	.formularz{
+		position: relative;
+		background-color: aliceblue;
+		width: 120vw;
+	}
+	img{
+		width: 120vw;
+	}
+	#swieta_lipka_galeria{
+		float: left;
+	}
+}
